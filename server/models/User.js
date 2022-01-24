@@ -56,6 +56,6 @@ userSchema.virtual("gameCount").get(function () {
 	return this.savedGames.length;
 });
 
-const User = model("User", userSchema);
+const User = mongoose.model("User", userSchema);
 
 module.exports = User;
