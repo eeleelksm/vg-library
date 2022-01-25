@@ -22,10 +22,10 @@ const gameSchema = new Schema({
 	//   min: 0.99
 	// },
 	// category: {
-	//   type: Schema.Types.ObjectId,
-	//   ref: "Category",
-	//   required: true
-	// }
+	// 	type: Schema.Types.ObjectId,
+	// 	ref: "Category",
+	// 	required: true,
+	// },
 });
 
 const Game = mongoose.model("Game", gameSchema);

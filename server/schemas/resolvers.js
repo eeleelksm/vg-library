@@ -1,7 +1,11 @@
+const { Review } = require("../models");
+const { AuthenticationError } = require("apollo-server-express");
+const { signToken } = require("../utils/auth");
+
 const resolvers = {
 	Query: {
-		helloWorld: () => {
-			return "Hello world!";
+		reviews: async () => {
+			return Review.find().sort({ createdAt: -1 });
 		},
 	},
 };
