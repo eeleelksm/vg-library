@@ -7,13 +7,22 @@ const gameSchema = new Schema({
 		required: true,
 		trim: true,
 	},
+	year: {
+		type: Number,
+	},
 	description: {
 		type: String,
 	},
-	system: {
+	platform: {
 		type: String,
 	},
 	image: {
+		type: String,
+	},
+	category: {
+		type: String,
+	},
+	mode: {
 		type: String,
 	},
 	// price: {
