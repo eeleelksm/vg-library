@@ -7,12 +7,17 @@ const gameSchema = new Schema({
 		required: true,
 		trim: true,
 	},
+	year: {
+		type: String,
+	},
 	description: {
 		type: String,
 	},
-	platform: {
-		type: String,
-	},
+	platform: [
+		{
+			type: String,
+		},
+	],
 	gamegenre: {
 		type: String,
 	},

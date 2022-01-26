@@ -25,13 +25,7 @@ const userSchema = new Schema({
 			type: Schema.Types.ObjectId,
 			ref: "Game",
 		},
-	],
-	review: [
-		{
-			type: Schema.Types.ObjectId,
-			ref: "Review",
-		},
-	],
+	]
 });
 
 // hash the user's password
