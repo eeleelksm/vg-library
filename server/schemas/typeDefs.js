@@ -2,18 +2,19 @@ const { gql } = require("apollo-server-express");
 
 const typeDefs = gql`
 	type Query {
-		reviews: [Review]
+		games: [Game]
 	}
 
-	type Review {
-		_id: ID
-		reviewText: String
-		createdAt: String
-		username: String
+	type Game {
+		_id: ID!
+		name: String!
+		year: String
+		description: String
+		platform: [String]
+		gamegenre: String
+		moviegenre: String
+		mode: String
 	}
 `;
-
-// ask about bringing in an image? how would i do this?
-// an API needs to be brought in?
 
 module.exports = typeDefs;

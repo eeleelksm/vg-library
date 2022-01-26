@@ -1,11 +1,11 @@
-const { Review } = require("../models");
+const { Game } = require("../models");
 const { AuthenticationError } = require("apollo-server-express");
 const { signToken } = require("../utils/auth");
 
 const resolvers = {
 	Query: {
-		reviews: async () => {
-			return Review.find().sort({ createdAt: -1 });
+		games: async () => {
+			return await Game.find().sort({ createdAt: -1 });
 		},
 	},
 };

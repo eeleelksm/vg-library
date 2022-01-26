@@ -7,29 +7,21 @@ const gameSchema = new Schema({
 		required: true,
 		trim: true,
 	},
-	year: {
-		type: Number,
-	},
 	description: {
 		type: String,
 	},
 	platform: {
 		type: String,
 	},
-	image: {
+	gamegenre: {
 		type: String,
 	},
-	category: {
+	moviegenre: {
 		type: String,
 	},
 	mode: {
 		type: String,
 	},
-	// price: {
-	//   type: Number,
-	//   required: true,
-	//   min: 0.99
-	// },
 	// category: {
 	// 	type: Schema.Types.ObjectId,
 	// 	ref: "Category",
