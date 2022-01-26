@@ -1,23 +1,23 @@
 const gameData = [
-	{
-		name: "Kingdom Hearts",
-		year: "2002",
-		description:
-			"Sora, Riku, and Kairi want leave their home world of Destiny Islands to explore new worlds. On the night before the planned voyage, the islands are attacked by the Heartless, and Riku and Kairi disappear. Before the Heartless consume the islands, Sora mysteriously obtains the Keyblade, a weapon effective against the Heartless. Sora, chosen to wield the Keyblade—a weapon which is a cross between a key and a sword—for battling darkness, is joined by Donald Duck and Goofy to help close Kingdom Hearts and reconstruct the worlds and people lost to the Heartless. The collaboration between Disney and Square resulted in a mixture of familiar Disney and Square Final Fantasy characters, as well as several new characters created and designed by Tetsuya Nomura",
-		platform: "PS2",
-		gamegenre: "Role-Playing",
-		moviegenre: "Fantasy",
-		mode: "Single Player",
-	},
-	{
-		name: "God of War",
-		year: "2018",
-		description: "",
-		platform: ["PS4", "PC"],
-		gamegenre: "Action Adventure",
-		moviegenre: "Fantasy",
-		mode: "Single Player",
-	},
+	// {
+	// 	name: "Kingdom Hearts",
+	// 	year: "2002",
+	// 	description:
+	// 		"Sora, Riku, and Kairi want leave their home world of Destiny Islands to explore new worlds. On the night before the planned voyage, the islands are attacked by the Heartless, and Riku and Kairi disappear. Before the Heartless consume the islands, Sora mysteriously obtains the Keyblade, a weapon effective against the Heartless. Sora, chosen to wield the Keyblade—a weapon which is a cross between a key and a sword—for battling darkness, is joined by Donald Duck and Goofy to help close Kingdom Hearts and reconstruct the worlds and people lost to the Heartless. The collaboration between Disney and Square resulted in a mixture of familiar Disney and Square Final Fantasy characters, as well as several new characters created and designed by Tetsuya Nomura",
+	// 	platform: "PS2",
+	// 	gamegenre: "Role-Playing",
+	// 	moviegenre: "Fantasy",
+	// 	mode: "Single Player",
+	// },
+	// {
+	// 	name: "God of War",
+	// 	year: "2018",
+	// 	description: "",
+	// 	platform: ["PS4", "PC"],
+	// 	gamegenre: "Action Adventure",
+	// 	moviegenre: "Fantasy",
+	// 	mode: "Single Player",
+	// },
 	{
 		name: "The Elder Scrolls V: Skyrim",
 		year: "2011",
