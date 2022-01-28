@@ -13,26 +13,32 @@ const resolvers = {
 			}
 			throw new AuthenticationError("You need to be logged in");
 		},
+
 		// get all users
 		users: async () => {
 			return User.find().select("-__v -password").populate("savedGames");
 		},
+
 		// get a user by username
 		user: async (parent, { username }) => {
 			return User.findOne({ username })
 				.select("-__v -password")
 				.populate("savedGames");
 		},
+
+		// get all games
 		games: async () => {
 			return await Game.find().sort({ createdAt: -1 });
 		},
 	},
+
 	Mutation: {
 		addUser: async (parent, args) => {
 			const user = await User.create(args);
 			const token = signToken(user);
 			return { token, user };
 		},
+
 		login: async (parent, { email, password }) => {
 			const user = await User.findOne({ email });
 			if (!user) {
@@ -45,6 +51,7 @@ const resolvers = {
 			const token = signToken(user);
 			return { token, user };
 		},
+
 		addGame: async (parent, args, context) => {
 			if (context.user) {
 				const game = await Game.create({ ...args, username: context.user.username });
@@ -59,6 +66,30 @@ const resolvers = {
 			throw new AuthenticationError("You need to be logged in.");
 		},
 	},
+	// 	saveGame: async (parent, args, context) => {
+	// 		if (context.user) {
+	// 			const updatedUser = await User.findByIdAndUpdate(
+	// 				{ _id: context.user._id },
+	// 				{ $addToSet: { savedGames: game.id } },
+	// 				{ new: true, runValidators: true }
+	// 			);
+	// 			return updatedUser;
+	// 		}
+	// 		throw new AuthenticationError("You need to be logged in.");
+	// 	},
+
+	// 	removeGame: async (parent, args, context) => {
+	// 		if (context.user) {
+	// 			const updatedUser = await User.findOneAndUpdate(
+	// 				{ _id: context.user._id },
+	// 				{ $pull: { savedGames: game.id } },
+	// 				{ new: true }
+	// 			).populate("savedGames");
+	// 			return updatedUser;
+	// 		}
+	// 		throw new AuthenticationError("You need to login.");
+	// 	},
+	// },
 };
 
 module.exports = resolvers;
