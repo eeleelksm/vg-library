@@ -1,18 +1,15 @@
 import React from "react";
-import "./Header.css";
+import "../../index.css";
+import Nav from "../Nav/Nav.jsx";
 
 function Header() {
 	return (
-		<header>
-			<div className="header-wrap">
-				<div className="left">
-					<a href="#home" className="logo">
-						<img src="images/Playbox4.png" alt="" />
-					</a>
-				</div>
-				<div className="right">test</div>
-			</div>
-		</header>
+		<div className="header-wrap">
+			<a href="#home" className="logo">
+				<img src="images/Playbox4.png" alt="" />
+			</a>
+			<div className="left"></div>
+		</div>
 	);
 }
 

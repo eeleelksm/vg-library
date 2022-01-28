@@ -19,6 +19,17 @@ const typeDefs = gql`
 		mode: String
 	}
 
+	input GameInput {
+		_id: ID!
+		name: String!
+		year: String
+		description: String
+		platform: [String]
+		gamegenre: String
+		moviegenre: String
+		mode: String
+	}
+
 	type Query {
 		me: User
 		users: [User]

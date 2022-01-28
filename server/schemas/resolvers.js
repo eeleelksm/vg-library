@@ -66,17 +66,17 @@ const resolvers = {
 			throw new AuthenticationError("You need to be logged in.");
 		},
 	},
-	// 	saveGame: async (parent, args, context) => {
-	// 		if (context.user) {
-	// 			const updatedUser = await User.findByIdAndUpdate(
-	// 				{ _id: context.user._id },
-	// 				{ $addToSet: { savedGames: game.id } },
-	// 				{ new: true, runValidators: true }
-	// 			);
-	// 			return updatedUser;
-	// 		}
-	// 		throw new AuthenticationError("You need to be logged in.");
-	// 	},
+	// saveGame: async (root, args) => {
+	// 	if (context.user) {
+	// 		const updatedUser = await User.findByIdAndUpdate(
+	// 			{ _id: context.user._id },
+	// 			{ $addToSet: { savedGames: args._id } },
+	// 			{ new: true }
+	// 		).populate("savedGames");
+	// 		return updatedUser;
+	// 	}
+	// 	throw new AuthenticationError("You need to be logged in.");
+	// },
 
 	// 	removeGame: async (parent, args, context) => {
 	// 		if (context.user) {
