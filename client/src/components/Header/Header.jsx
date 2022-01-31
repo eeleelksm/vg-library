@@ -3,8 +3,8 @@ import "./header.scss";
 
 function Header() {
 	return (
-		<header>
-			TEST
+		<header className="header">
+			Playbox
 			{/* <div>
 				<a href="#home" className="logo">
 					TEST

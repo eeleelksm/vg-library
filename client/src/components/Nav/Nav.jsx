@@ -3,7 +3,7 @@ import "../../index.css";
 
 function Nav() {
 	return (
-		<nav>
+		<nav className="navbar">
 			{/* <ul className="nav">
 				<li>
 					<a href="#home" className="nav-names">
