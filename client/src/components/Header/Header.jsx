@@ -1,15 +1,22 @@
 import React from "react";
 import "../../index.css";
-import Nav from "../Nav/Nav.jsx";
 
 function Header() {
 	return (
-		<div className="header-wrap">
-			<a href="#home" className="logo">
-				<img src="images/Playbox4.png" alt="" />
-			</a>
-			<div className="left"></div>
-		</div>
+		<header>
+			TEST
+			{/* <div>
+				<a href="#home" className="logo">
+					TEST
+					<img src="images/Playbox4.png" style={{ width: "100%" }} alt="PlayBox image" />
+				</a>
+			</div>
+			<div className="hamburger">
+				<span className="line1"></span>
+				<span className="line2"></span>
+				<span className="line3"></span>
+			</div> */}
+		</header>
 	);
 }
 
