@@ -6,11 +6,10 @@ import Home from "./pages/Home/Home";
 
 function App() {
 	return (
-		<div>
+		<div className="app">
 			<Header />
 			<Nav />
 			<Home />
-			<div className="app">test</div>
 		</div>
 	);
 }

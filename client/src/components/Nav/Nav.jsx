@@ -4,7 +4,7 @@ import "../../index.css";
 function Nav() {
 	return (
 		<nav>
-			<ul className="nav">
+			{/* <ul className="nav">
 				<li>
 					<a href="#home" className="nav-names">
 						Home
@@ -30,7 +30,7 @@ function Nav() {
 						Signup
 					</a>
 				</li>
-			</ul>
+			</ul> */}
 		</nav>
 	);
 }
