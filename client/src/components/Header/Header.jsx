@@ -4,18 +4,20 @@ import "./header.scss";
 function Header() {
 	return (
 		<header className="header">
-			Playbox
-			{/* <div>
-				<a href="#home" className="logo">
-					TEST
-					<img src="images/Playbox4.png" style={{ width: "100%" }} alt="PlayBox image" />
-				</a>
+			<div className="wrap">
+				<div className="left">
+					<a href="#home" className="logo">
+						Playbox
+					</a>
+				</div>
+				<div className="right">
+					<div className="hamburger">
+						<span className="line"></span>
+						<span className="line"></span>
+						<span className="line"></span>
+					</div>
+				</div>
 			</div>
-			<div className="hamburger">
-				<span className="line1"></span>
-				<span className="line2"></span>
-				<span className="line3"></span>
-			</div> */}
 		</header>
 	);
 }
