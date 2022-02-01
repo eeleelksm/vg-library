@@ -4,8 +4,8 @@ import Nav from "./components/Nav/Nav";
 import Home from "./pages/Home/Home";
 import SearchGames from "./pages/SearchGames/SearchGames";
 import SavedGames from "./pages/SavedGames/SavedGames";
-import Contact from "./pages/Contact/Contact";
 import Login from "./pages/Login/Login";
+import Signup from "./pages/Signup/Signup";
 import "./App.scss";
 
 function App() {
@@ -20,8 +20,8 @@ function App() {
 				<Home />
 				<SearchGames />
 				<SavedGames />
-				<Contact />
 				<Login />
+				<Signup />
 			</div>
 		</div>
 	);

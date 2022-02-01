@@ -20,9 +20,6 @@ function Nav({ navOpen, setNavOpen }) {
 				<li onClick={() => setNavOpen(false)}>
 					<a href="#signup">Signup</a>
 				</li>
-				<li onClick={() => setNavOpen(false)}>
-					<a href="#contact">Contact</a>
-				</li>
 			</ul>
 		</nav>
 	);

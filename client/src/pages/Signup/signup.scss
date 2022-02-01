@@ -1,5 +1,7 @@
-.login {
-	.login-header {
+.signup {
+	background-color: lavender;
+
+	.signup-header {
 		font-size: 40px;
 		font-family: "Staatliches", cursive;
 		text-align: center;
@@ -22,7 +24,7 @@
 		padding: 5px;
 	}
 
-	.btn {
+	button {
 		border-radius: 5px;
 		margin-left: 5px;
 		padding: 5px;
