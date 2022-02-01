@@ -1,0 +1,35 @@
+.login {
+	.login-header {
+		font-size: 40px;
+		font-family: "Staatliches", cursive;
+		text-align: center;
+		margin-top: 50px;
+	}
+	form {
+		font-family: "Murecho", sans-serif;
+		font-size: 15px;
+		margin: 10px;
+		padding: 10px;
+		text-align: center;
+	}
+
+	input {
+		display: flex;
+		width: 50%;
+		justify-content: space-evenly;
+		text-align: center;
+		margin: 0px 0px 10px 250px;
+		padding: 5px;
+	}
+
+	button {
+		border-radius: 5px;
+		margin-left: 5px;
+		padding: 5px;
+		width: 75px;
+		cursor: pointer;
+		background-color: black;
+		color: white;
+		font-weight: bold;
+	}
+}

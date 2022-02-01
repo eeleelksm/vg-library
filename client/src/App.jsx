@@ -5,6 +5,7 @@ import Home from "./pages/Home/Home";
 import SearchGames from "./pages/SearchGames/SearchGames";
 import SavedGames from "./pages/SavedGames/SavedGames";
 import Contact from "./pages/Contact/Contact";
+import Login from "./pages/Login/Login";
 import "./App.scss";
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
 				<SearchGames />
 				<SavedGames />
 				<Contact />
+				<Login />
 			</div>
 		</div>
 	);

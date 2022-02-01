@@ -15,7 +15,7 @@ function Nav({ navOpen, setNavOpen }) {
 					<a href="#saved-games">Your Saved Games</a>
 				</li>
 				<li onClick={() => setNavOpen(false)}>
-					<a href="#login">Login</a>
+					<a href="#login">Log In</a>
 				</li>
 				<li onClick={() => setNavOpen(false)}>
 					<a href="#signup">Signup</a>
