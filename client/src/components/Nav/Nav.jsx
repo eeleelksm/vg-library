@@ -1,36 +1,29 @@
 import React from "react";
-import "../../index.css";
+import "./nav.scss";
 
-function Nav() {
+function Nav({ navOpen, setNavOpen }) {
 	return (
-		<nav className="navbar">
-			{/* <ul className="nav">
-				<li>
-					<a href="#home" className="nav-names">
-						Home
-					</a>
+		<nav className={"navbar " + (navOpen && "active")}>
+			<ul>
+				<li onClick={() => setNavOpen(false)}>
+					<a href="#home">Home</a>
 				</li>
-				<li>
-					<a href="#games" className="nav-names">
-						View Games
-					</a>
+				<li onClick={() => setNavOpen(false)}>
+					<a href="#search-games">Add + View Games</a>
 				</li>
-				<li>
-					<a href="#saved-games" className="nav-names">
-						Your Saved Games
-					</a>
+				<li onClick={() => setNavOpen(false)}>
+					<a href="#saved-games">Your Saved Games</a>
 				</li>
-				<li>
-					<a href="#login" className="nav-names">
-						Login
-					</a>
+				<li onClick={() => setNavOpen(false)}>
+					<a href="#login">Login</a>
 				</li>
-				<li>
-					<a href="#signup" className="nav-names">
-						Signup
-					</a>
+				<li onClick={() => setNavOpen(false)}>
+					<a href="#signup">Signup</a>
 				</li>
-			</ul> */}
+				<li onClick={() => setNavOpen(false)}>
+					<a href="#contact">Contact</a>
+				</li>
+			</ul>
 		</nav>
 	);
 }

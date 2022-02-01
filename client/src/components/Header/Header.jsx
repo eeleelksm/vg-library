@@ -1,9 +1,9 @@
 import React from "react";
 import "./header.scss";
 
-function Header() {
+function Header({ navOpen, setNavOpen }) {
 	return (
-		<header className="header">
+		<header className={"header " + (navOpen && "active")}>
 			<div className="wrap">
 				<div className="left">
 					<a href="#home" className="logo">
@@ -11,7 +11,7 @@ function Header() {
 					</a>
 				</div>
 				<div className="right">
-					<div className="hamburger">
+					<div className="hamburger" onClick={() => setNavOpen(!navOpen)}>
 						<span className="line"></span>
 						<span className="line"></span>
 						<span className="line"></span>

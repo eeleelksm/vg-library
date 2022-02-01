@@ -5,15 +5,16 @@
 
 	.sections {
 		width: 100%;
-		height: calc(100vh - 300px);
+		height: calc(100vh - 100px);
 		background-color: palegreen;
 		position: relative;
-		top: 125px;
-		scroll-behavior: smooth;
+		top: 100px;
+		scroll-snap-type: y mandatory;
 
 		> * {
 			width: 100vw;
-			height: calc(100vh - 300px);
+			height: calc(100vh - 100px);
+			scroll-snap-align: start;
 		}
 	}
 }
