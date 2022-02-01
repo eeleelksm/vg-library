@@ -35,6 +35,7 @@ const typeDefs = gql`
 		users: [User]
 		user(username: String!): User
 		games(username: String): [Game]
+		game(_id: ID!): Game
 	}
 
 	type Mutation {

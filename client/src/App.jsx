@@ -16,7 +16,7 @@ import Signup from "./pages/Signup/Signup";
 import "./App.scss";
 
 const httpLink = createHttpLink({
-	uri: "http://localhost:3001/graphql",
+	uri: "http://localhost:3003/graphql",
 });
 
 const client = new ApolloClient({

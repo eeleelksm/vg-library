@@ -30,26 +30,6 @@ export const QUERY_GAME = gql`
 	}
 `;
 
-export const QUERY_USER = gql`
-	query user($username: String!) {
-		user(username: $username) {
-			_id
-			username
-			email
-			games {
-				_id
-				name
-				year
-				description
-				platform
-				gamegenre
-				moviegenre
-				mode
-			}
-		}
-	}
-`;
-
 export const QUERY_ME = gql`
 	{
 		me {
@@ -66,16 +46,6 @@ export const QUERY_ME = gql`
 				moviegenre
 				mode
 			}
-		}
-	}
-`;
-
-export const QUERY_ME_BASIC = gql`
-	{
-		me {
-			_id
-			username
-			email
 		}
 	}
 `;
