@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./header.scss";
 
 function Header({ navOpen, setNavOpen }) {
@@ -6,9 +7,9 @@ function Header({ navOpen, setNavOpen }) {
 		<header className={"header " + (navOpen && "active")}>
 			<div className="wrap">
 				<div className="left">
-					<a href="#home" className="logo">
+					<Link to="/" className="logo">
 						Playbox
-					</a>
+					</Link>
 				</div>
 				<div className="right">
 					<div className="hamburger" onClick={() => setNavOpen(!navOpen)}>

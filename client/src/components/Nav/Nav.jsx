@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 // import Auth from "../../utils/auth";
 import "./nav.scss";
 
@@ -11,29 +12,29 @@ function Nav({ navOpen, setNavOpen }) {
 		<nav className={"navbar " + (navOpen && "active")}>
 			<ul>
 				<li onClick={() => setNavOpen(false)}>
-					<a href="/">Home</a>
+					<Link to="/">Home</Link>
 				</li>
 				{/* {Auth.loggedIn() ? (<> */}
 				<li onClick={() => setNavOpen(false)}>
-					<a href="#search-games">Add + View Games</a>
+					<Link to="listed-games">Add + View Games</Link>
 				</li>
 				<li onClick={() => setNavOpen(false)}>
-					<a href="#saved-games">Your Saved Games</a>
+					<Link to="saved-games">Your Saved Games</Link>
 				</li>
 				<li onClick={() => setNavOpen(false)}>
-					<a href="#saved-games">
+					<Link to="/">
 						{/* onClick={logout} */}
 						Log Out
-					</a>
+					</Link>
 				</li>
 				{/* </>
 				) : (
 					<> */}
 				<li onClick={() => setNavOpen(false)}>
-					<a href="#login">Log In</a>
+					<Link to="login">Log In</Link>
 				</li>
 				<li onClick={() => setNavOpen(false)}>
-					<a href="#signup">Signup</a>
+					<Link to="signup">Signup</Link>
 				</li>
 				{/* </> */}
 				{/* )} */}
