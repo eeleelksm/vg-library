@@ -5,7 +5,7 @@ import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import "./gamelist.scss";
 
-const GameList = ({ games }) => {
+function GameList({ games }) {
 	// if (!games.legnth) {
 	//   return <h3>You don't have any games saved!</h3>;
 	// }
@@ -14,7 +14,7 @@ const GameList = ({ games }) => {
 		<div className="game-list">
 			{games &&
 				games.map((game) => (
-					<Card sx={{ minWidth: 250, ml: 5 }} key={game._id}>
+					<Card sx={{ minWidth: 250, ml: 5 }} key={game._id} className="card">
 						<CardContent>
 							<div>
 								<Typography variant="h5" component="div">
@@ -41,6 +41,6 @@ const GameList = ({ games }) => {
 				))}
 		</div>
 	);
-};
+}
 
 export default GameList;
