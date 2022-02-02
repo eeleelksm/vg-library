@@ -12,7 +12,7 @@ function SearchGames() {
 
 	return (
 		<div className="search-games" id="search-games">
-			<h3>Add + View Games</h3>
+			<h2>Add + View Games</h2>
 			<div className="add-game">
 				<h3>Add Games</h3>
 				<AddGame />

@@ -1,14 +1,21 @@
 .search-games {
 	background-color: rgb(110, 204, 204);
 
+	h2 {
+		font-size: 50px;
+		font-family: "Staatliches", cursive;
+		text-align: center;
+		margin-top: 40px;
+	}
+
 	h3 {
 		font-size: 40px;
 		font-family: "Staatliches", cursive;
 		text-align: center;
-		margin-top: 50px;
+		margin-top: 20px;
 	}
 
 	.game-list {
-		margin-top: 20px;
+		margin-top: 10px;
 	}
 }

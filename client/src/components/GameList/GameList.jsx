@@ -14,11 +14,11 @@ function GameList({ games }) {
 
 	return (
 		<div className="game-list">
-			<Grid container spacing={3}>
+			<Grid container spacing={3} sx={{ pl: 1 }}>
 				{games &&
 					games.map((game) => (
-						<Grid item xs={4}>
-							<Card sx={{ minWidth: 250, ml: 5 }} key={game._id} className="card">
+						<Grid item xs={4} key={game._id}>
+							<Card sx={{ minWidth: 250, ml: 2 }} className="card">
 								<CardContent>
 									<div>
 										<Typography variant="h5" component="div">

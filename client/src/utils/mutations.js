@@ -27,12 +27,12 @@ export const ADD_USER = gql`
 export const ADD_GAME = gql`
 	mutation addGame(
 		$name: String!
-		$year: String!
+		$year: String
 		$description: String!
 		$platform: [String!]
 		$gamegenre: String!
 		$moviegenre: String!
-		$mode: String!
+		$mode: String
 	{
 		addGame(
 			name: $name
