@@ -1,4 +1,4 @@
-import "./searchgames.scss";
+import "./listedgames.scss";
 import { useQuery } from "@apollo/client";
 import { QUERY_GAMES } from "../../utils/queries";
 import GameList from "../../components/GameList/GameList";
@@ -11,9 +11,10 @@ function SearchGames() {
 
 	return (
 		<div className="search-games" id="search-games">
-			{/* <div>GAME LIST</div> */}
-      <h3>listed games</h3>
-			<GameList />
+			<h3>Add + View Games</h3>
+			<div className="game-list">
+				<GameList games={games} />
+			</div>
 		</div>
 	);
 }

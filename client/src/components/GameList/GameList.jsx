@@ -1,4 +1,3 @@
-import { Games } from "@mui/icons-material";
 import Card from "@mui/material/Card";
 import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
@@ -13,32 +12,33 @@ const GameList = ({ games }) => {
 
 	return (
 		<div className="game-list">
-			<Card sx={{ maxWidth: 250, ml: 5 }}>
-				<CardContent>
-					{games &&
-						games.map((game) => (
-							<Typography key={game._id} variant="h5" component="div">
-								{game.name}
-							</Typography>
-						))}
-
-					<Typography sx={{ mb: 1.5 }} color="text.secondary">
-						year
-						<br />
-						platforms
-						<br />
-						movie genre
-						<br />
-						mode
-					</Typography>
-					<Typography variant="body1">description</Typography>
-				</CardContent>
-				<CardActions>
-					<Button size="small" sx={{ textAlign: "center" }}>
-						Add to Your Saved Games
-					</Button>
-				</CardActions>
-			</Card>
+			{games &&
+				games.map((game) => (
+					<Card sx={{ minWidth: 250, ml: 5 }} key={game._id}>
+						<CardContent>
+							<div>
+								<Typography variant="h5" component="div">
+									{game.name}
+								</Typography>
+								<Typography sx={{ mb: 1.5 }} color="text.secondary">
+									Year: {game.year}
+									<br />
+									Platforms: {game.platforms}
+									<br />
+									Movie Genre: {game.moviegenre}
+									<br />
+									Play Mode: {game.mode}
+								</Typography>
+								<Typography variant="body1">{game.description}</Typography>
+							</div>
+						</CardContent>
+						<CardActions>
+							<Button size="small" sx={{ textAlign: "center" }}>
+								Add to Your Saved Games
+							</Button>
+						</CardActions>
+					</Card>
+				))}
 		</div>
 	);
 };

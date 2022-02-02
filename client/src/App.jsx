@@ -9,7 +9,7 @@ import {
 import Header from "./components/Header/Header";
 import Nav from "./components/Nav/Nav";
 import Home from "./pages/Home/Home";
-import SearchGames from "./pages/SearchGames/SearchGames";
+import ListedGames from "./pages/ListedGames/ListedGames";
 import SavedGames from "./pages/SavedGames/SavedGames";
 import Login from "./pages/Login/Login";
 import Signup from "./pages/Signup/Signup";
@@ -34,7 +34,7 @@ function App() {
 				<Nav navOpen={navOpen} setNavOpen={setNavOpen} />
 				<div className="sections">
 					<Home />
-					<SearchGames />
+					<ListedGames />
 					<SavedGames />
 					<Login />
 					<Signup />
