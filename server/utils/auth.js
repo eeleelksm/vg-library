@@ -20,11 +20,11 @@ module.exports = {
 			req.user = data;
 		} catch {
 			console.log("Invalid token");
-			console.log(req.user);
 		}
 
 		return req;
 	},
+
 	signToken: function ({ username, email, _id }) {
 		const payload = { username, email, _id };
 

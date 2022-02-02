@@ -1,3 +1,4 @@
+import React from "react";
 import Card from "@mui/material/Card";
 import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
@@ -14,7 +15,7 @@ function GameList({ games }) {
 
 	return (
 		<div className="game-list">
-			<Grid container spacing={3} sx={{ pl: 1 }}>
+			<Grid container spacing={3} sx={{ pl: 1, mb: 3 }}>
 				{games &&
 					games.map((game) => (
 						<Grid item xs={4} key={game._id}>

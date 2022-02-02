@@ -33,7 +33,7 @@ export const ADD_GAME = gql`
 		$gamegenre: String!
 		$moviegenre: String!
 		$mode: String
-	{
+	) {
 		addGame(
 			name: $name
 			year: $year

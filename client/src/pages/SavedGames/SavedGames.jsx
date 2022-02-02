@@ -1,3 +1,4 @@
+import React from "react";
 import "./savedgames.scss";
 
 function SavedGames() {
