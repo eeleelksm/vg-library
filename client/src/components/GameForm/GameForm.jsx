@@ -5,7 +5,15 @@ import { QUERY_GAMES, QUERY_ME } from "../../utils/queries";
 import "./gameform.scss";
 
 const GameForm = () => {
-	const [gameData, setGameData] = useState("");
+	const [addGames, setAddGames] = useState({
+		name: "",
+		year: "",
+		description: "",
+		platform: "",
+		gamegenre: "",
+		moviegenre: "",
+		mode: "",
+	});
 
 	const [addGame, { error }] = useMutation(ADD_GAME, {
 		update(cache, { data: { addGame } }) {
@@ -31,17 +39,17 @@ const GameForm = () => {
 	});
 
 	const handleChange = (event) => {
-		setGameData(event.target.value);
+		setAddGames(event.target.value);
 	};
 
 	const handleFormSubmit = async (event) => {
 		event.preventDefault();
 		try {
 			await addGame({
-				variables: { gameData },
+				variables: { addGames },
 			});
 			// clear form
-			setGameData("");
+			setAddGames("");
 		} catch (e) {
 			console.error(e);
 		}
@@ -54,8 +62,7 @@ const GameForm = () => {
 					className="form-input"
 					placeholder="Name of Game (Required)"
 					name="game"
-					type="game"
-					id="game"
+					value={addGames.name}
 					onChange={handleChange}
 				/>
 				<input
@@ -64,6 +71,7 @@ const GameForm = () => {
 					name="year"
 					type="year"
 					id="year"
+					value={addGames.year}
 					onChange={handleChange}
 				/>
 				<input
@@ -72,6 +80,7 @@ const GameForm = () => {
 					name="platform"
 					type="platform"
 					id="platform"
+					value={addGames.platform}
 					onChange={handleChange}
 				/>
 				<input
@@ -80,6 +89,7 @@ const GameForm = () => {
 					name="game-genre"
 					type="game-genre"
 					id="game-genre"
+					value={addGames.gamegenre}
 					onChange={handleChange}
 				/>
 				<input
@@ -88,6 +98,7 @@ const GameForm = () => {
 					name="movie-genre"
 					type="movie-genre"
 					id="movie-genre"
+					value={addGames.moviegenre}
 					onChange={handleChange}
 				/>
 				<input
@@ -96,6 +107,7 @@ const GameForm = () => {
 					name="mode"
 					type="mode"
 					id="mode"
+					value={addGames.mode}
 					onChange={handleChange}
 				/>
 				<input
@@ -104,6 +116,7 @@ const GameForm = () => {
 					name="description"
 					type="description"
 					id="description"
+					value={addGames.description}
 					onChange={handleChange}
 				/>
 				<button className="btn" type="submit">

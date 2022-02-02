@@ -5,6 +5,7 @@ import CardContent from "@mui/material/CardContent";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import Grid from "@mui/material/Grid";
+import DeleteIcon from "@mui/icons-material/Delete";
 
 import "./gamelist.scss";
 
@@ -30,6 +31,8 @@ function GameList({ games }) {
 											<br />
 											Platforms: {game.platforms}
 											<br />
+											Game Genre: {game.gamegenre}
+											<br />
 											Movie Genre: {game.moviegenre}
 											<br />
 											Play Mode: {game.mode}
@@ -39,7 +42,10 @@ function GameList({ games }) {
 								</CardContent>
 								<CardActions>
 									<Button size="small" sx={{ textAlign: "center" }}>
-										Add to Your Saved Games
+										Add to Your Saved
+									</Button>
+									<Button size="small" sx={{ textAlign: "right" }}>
+										Delete
 									</Button>
 								</CardActions>
 							</Card>
