@@ -49,7 +49,7 @@ const typeDefs = gql`
 			gamegenre: String!
 			moviegenre: String!
 			mode: String!
-		): Game
+		): User
 	}
 
 	type Auth {
