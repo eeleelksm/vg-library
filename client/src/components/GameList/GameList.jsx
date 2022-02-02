@@ -3,6 +3,8 @@ import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
+import Grid from "@mui/material/Grid";
+
 import "./gamelist.scss";
 
 function GameList({ games }) {
@@ -12,33 +14,37 @@ function GameList({ games }) {
 
 	return (
 		<div className="game-list">
-			{games &&
-				games.map((game) => (
-					<Card sx={{ minWidth: 250, ml: 5 }} key={game._id} className="card">
-						<CardContent>
-							<div>
-								<Typography variant="h5" component="div">
-									{game.name}
-								</Typography>
-								<Typography sx={{ mb: 1.5 }} color="text.secondary">
-									Year: {game.year}
-									<br />
-									Platforms: {game.platforms}
-									<br />
-									Movie Genre: {game.moviegenre}
-									<br />
-									Play Mode: {game.mode}
-								</Typography>
-								<Typography variant="body1">{game.description}</Typography>
-							</div>
-						</CardContent>
-						<CardActions>
-							<Button size="small" sx={{ textAlign: "center" }}>
-								Add to Your Saved Games
-							</Button>
-						</CardActions>
-					</Card>
-				))}
+			<Grid container spacing={3}>
+				{games &&
+					games.map((game) => (
+						<Grid item xs={4}>
+							<Card sx={{ minWidth: 250, ml: 5 }} key={game._id} className="card">
+								<CardContent>
+									<div>
+										<Typography variant="h5" component="div">
+											{game.name}
+										</Typography>
+										<Typography sx={{ mb: 1.5 }} color="text.secondary">
+											Year: {game.year}
+											<br />
+											Platforms: {game.platforms}
+											<br />
+											Movie Genre: {game.moviegenre}
+											<br />
+											Play Mode: {game.mode}
+										</Typography>
+										<Typography variant="body1">{game.description}</Typography>
+									</div>
+								</CardContent>
+								<CardActions>
+									<Button size="small" sx={{ textAlign: "center" }}>
+										Add to Your Saved Games
+									</Button>
+								</CardActions>
+							</Card>
+						</Grid>
+					))}
+			</Grid>
 		</div>
 	);
 }
