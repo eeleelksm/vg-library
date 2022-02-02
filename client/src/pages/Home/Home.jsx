@@ -2,7 +2,7 @@ import "./home.scss";
 
 function Home() {
 	return (
-		<div className="home" id="home">
+		<div className="home" id="/">
 			<h1>welcome to your playbox!</h1>
 			<h3>Do you like Fantasy movies?</h3>
 			<p className="description">

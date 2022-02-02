@@ -5,6 +5,7 @@ import {
 	InMemoryCache,
 	createHttpLink,
 } from "@apollo/client";
+import { BrowserRouter as Router, Route } from "react-router-dom";
 
 import Header from "./components/Header/Header";
 import Nav from "./components/Nav/Nav";
@@ -29,17 +30,19 @@ function App() {
 
 	return (
 		<ApolloProvider client={client}>
-			<div className="app">
-				<Header navOpen={navOpen} setNavOpen={setNavOpen} />
-				<Nav navOpen={navOpen} setNavOpen={setNavOpen} />
-				<div className="sections">
-					<Home />
-					<ListedGames />
-					<SavedGames />
-					<Login />
-					<Signup />
+			<Router>
+				<div className="app">
+					<Header navOpen={navOpen} setNavOpen={setNavOpen} />
+					<Nav navOpen={navOpen} setNavOpen={setNavOpen} />
+					<div className="sections">
+						<Router exact path="/" component={Home} />
+						<Router exact path="/listed-games" component={ListedGames} />
+						<Router exact path="/saved-games" component={SavedGames} />
+						<Router exact path="/login" component={Login} />
+						<Router exact path="/signup" component={Signup} />
+					</div>
 				</div>
-			</div>
+			</Router>
 		</ApolloProvider>
 	);
 }

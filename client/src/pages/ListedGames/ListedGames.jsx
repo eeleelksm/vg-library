@@ -11,7 +11,7 @@ function SearchGames() {
 	console.log(games);
 
 	return (
-		<div className="search-games" id="search-games">
+		<div className="listed-games" id="listed-games">
 			<h2>Add + View Games</h2>
 			<div className="add-game">
 				<h3>Add Games</h3>

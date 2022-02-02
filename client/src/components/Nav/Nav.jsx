@@ -11,7 +11,7 @@ function Nav({ navOpen, setNavOpen }) {
 		<nav className={"navbar " + (navOpen && "active")}>
 			<ul>
 				<li onClick={() => setNavOpen(false)}>
-					<a href="#home">Home</a>
+					<a href="/">Home</a>
 				</li>
 				{/* {Auth.loggedIn() ? (<> */}
 				<li onClick={() => setNavOpen(false)}>
