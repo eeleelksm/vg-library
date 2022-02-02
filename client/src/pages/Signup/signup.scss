@@ -7,7 +7,7 @@
 		text-align: center;
 		margin-top: 50px;
 	}
-	form {
+	.form {
 		font-family: "Murecho", sans-serif;
 		font-size: 15px;
 		margin: 10px;
@@ -15,7 +15,7 @@
 		text-align: center;
 	}
 
-	input {
+	.form-input {
 		display: flex;
 		width: 50%;
 		justify-content: space-evenly;
@@ -33,5 +33,11 @@
 		background-color: black;
 		color: white;
 		font-weight: bold;
+	}
+
+	.error {
+		font-family: "Murecho", sans-serif;
+		font-size: 15px;
+		text-align: center;
 	}
 }
