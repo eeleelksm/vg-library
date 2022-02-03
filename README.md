@@ -9,7 +9,7 @@ Want to add a video game recommendation yourself?
 View and add to the extensive library!
 
 ## Deployment
-The application can be found here:
+The application can be found here, at the [Playbox](https://damp-headland-76689.herokuapp.com/)
 
 ## Tools
 <b>Playbox</b> uses multiple tools, libraries, and frameworks:
