@@ -8,6 +8,9 @@ Want to add a video game recommendation yourself?
 
 View and add to the extensive library!
 
+## Deployment
+The application can be found here:
+
 ## Tools
 <b>Playbox</b> uses multiple tools, libraries, and frameworks:
 
