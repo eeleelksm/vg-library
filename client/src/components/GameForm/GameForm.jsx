@@ -48,6 +48,7 @@ const GameForm = () => {
 			await addGame({
 				variables: { addGames },
 			});
+
 			// clear form
 			setAddGames("");
 		} catch (e) {
