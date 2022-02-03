@@ -50,6 +50,7 @@ const typeDefs = gql`
 			moviegenre: String!
 			mode: String!
 		): Game
+    saveGame(gameData: GameInput!): User
     removeGame(_id: ID!): User
 	}
 

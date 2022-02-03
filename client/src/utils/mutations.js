@@ -73,3 +73,22 @@ export const REMOVE_GAME = gql`
 		}
 	}
 `;
+
+export const SAVE_GAME = gql`
+	mutation saveGame($gameData: GameInput!) {
+		saveGame(gameData: $gameData) {
+			_id
+			username
+			email
+			savedGames {
+				name
+				year
+				descriptionn
+				platform
+				gamegenre
+				moviegenre
+				mode
+			}
+		}
+	}
+`;

@@ -78,17 +78,17 @@ const resolvers = {
 			throw new AuthenticationError("You need to login.");
 		},
 	},
-	// saveGame: async (root, args) => {
-	// 	if (context.user) {
-	// 		const updatedUser = await User.findByIdAndUpdate(
-	// 			{ _id: context.user._id },
-	// 			{ $addToSet: { savedGames: args._id } },
-	// 			{ new: true }
-	// 		).populate("savedGames");
-	// 		return updatedUser;
-	// 	}
-	// 	throw new AuthenticationError("You need to be logged in.");
-	// },
+	saveGame: async (parent, { gameData }, context) => {
+		if (context.user) {
+			const updatedUser = await User.findByIdAndUpdate(
+				{ _id: context.user._id },
+				{ $addToSet: { savedGames: gameData } },
+				{ new: true }
+			).populate("savedGames");
+			return updatedUser;
+		}
+		throw new AuthenticationError("You need to be logged in.");
+	},
 };
 
 module.exports = resolvers;
