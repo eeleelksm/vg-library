@@ -84,7 +84,7 @@ const resolvers = {
 				{ _id: context.user._id },
 				{ $addToSet: { savedGames: gameData } },
 				{ new: true }
-			).populate("savedGames");
+			);
 			return updatedUser;
 		}
 		throw new AuthenticationError("You need to be logged in.");

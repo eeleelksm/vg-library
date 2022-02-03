@@ -1,10 +1,29 @@
 .home {
-	background-color: white;
+	background-color: lavenderblush;
 
 	h1 {
 		font-family: "Staatliches", cursive;
 		font-size: 75px;
 		text-align: center;
 		padding-top: 20px;
+		text-decoration: underline;
+	}
+
+	h3 {
+		font-family: "Staatliches", cursive;
+		text-align: center;
+		font-size: 50px;
+	}
+
+	span {
+		color: purple;
+		font-family: "Staatliches", cursive;
+		font-size: 50px;
+	}
+
+	p {
+		text-align: center;
+		font-family: "Murecho", sans-serif;
+		font-size: 20px;
 	}
 }
