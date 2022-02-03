@@ -1,33 +1,36 @@
 .home {
-	background-color: lavenderblush;
+	background-color: white;
 
 	h1 {
 		font-family: "Staatliches", cursive;
 		font-size: 75px;
 		text-align: center;
 		padding-top: 20px;
-		text-decoration: underline;
 	}
 
 	h3 {
 		font-family: "Staatliches", cursive;
 		text-align: center;
 		font-size: 50px;
+		color: white;
+		background-color: rgb(14, 13, 13);
 	}
 
 	span {
-		color: rgb(189, 26, 189);
+		color: rgb(164, 103, 221);
 		font-family: "Staatliches", cursive;
 		font-size: 50px;
 	}
 
 	.contact {
 		text-align: center;
+
 		.contact-us {
-			color: rgb(238, 135, 97);
+			margin-top: 10px;
+			color: rgb(97, 99, 238);
 		}
 		.contact-links {
-			color: rgb(23, 135, 172);
+			color: rgb(129, 182, 231);
 			font-size: 30px;
 		}
 	}

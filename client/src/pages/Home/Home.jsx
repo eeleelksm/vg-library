@@ -42,20 +42,32 @@ function Home() {
 				Want to add a video game recommendation yourself?
 				<br />
 				<br />
-				Playbox is an interactive library where you can view and add video games you'd
-				like to enjoy for later or would like to recommend to others.
+				Playbox is an interactive library <br />
+				where you can view and add video games <br />
+				you'd like to enjoy for later or would like to recommend to others.
+				<br />
 				<br />
 				View and add to our extensive library!
+				<br />
 			</p>
 			<div className="contact">
-				<span className="contact-us">Contact US!</span>
+				<span className="contact-us">Contact US</span>
 				<span className="contact-links">
 					<br />
-					<a href="" Github
+					<a href="https://www.github.com/eeleelksm" target="_blank">
+						Github
+					</a>
 					<br />
-					LinkedIn
+					<a
+						href="https://www.linkedin.com/in/keshia-lee-martin-05388a75/"
+						target="_blank"
+					>
+						LinkedIn
+					</a>
 					<br />
-					Email
+					<a href="mailto:keshialeemartin@gmail.com" target="_blank">
+						Email
+					</a>
 				</span>
 				<br />
 				<div>
