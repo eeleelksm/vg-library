@@ -16,9 +16,20 @@
 	}
 
 	span {
-		color: purple;
+		color: rgb(189, 26, 189);
 		font-family: "Staatliches", cursive;
 		font-size: 50px;
+	}
+
+	.contact {
+		text-align: center;
+		.contact-us {
+			color: rgb(238, 135, 97);
+		}
+		.contact-links {
+			color: rgb(23, 135, 172);
+			font-size: 30px;
+		}
 	}
 
 	p {

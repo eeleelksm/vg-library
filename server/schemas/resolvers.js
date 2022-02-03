@@ -68,7 +68,7 @@ const resolvers = {
 
 		removeGame: async (parent, args, context, info) => {
 			for (let i in games) {
-				if (games[i].id === args.id) {
+				if (games[i]._id === args.id) {
 					games.splice(i, 1);
 				}
 			}

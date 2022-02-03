@@ -1,13 +1,31 @@
 import React from "react";
+import { useMutation } from "@apollo/client";
 import Card from "@mui/material/Card";
 import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import Grid from "@mui/material/Grid";
+import { REMOVE_GAME } from "../../utils/mutations";
 import "./gamelist.scss";
 
 function GameList({ games }) {
+	const [removeGame] = useMutation(REMOVE_GAME);
+
+	function refreshPage() {
+		window.location.reload(false);
+	}
+
+	// const handleDeleteGame = async (game) => {
+	// 	try {
+	// 		const { data } = await removeGame({
+	// 			variables: { game },
+	// 		});
+	// 	} catch (e) {
+	// 		console.error(e);
+	// 	}
+	// };
+
 	return (
 		<div className="game-list">
 			<Grid container spacing={3} sx={{ pl: 1, mb: 3 }}>
@@ -23,7 +41,7 @@ function GameList({ games }) {
 										<Typography sx={{ mb: 1.5 }} color="text.secondary">
 											Year: {game.year}
 											<br />
-											Platforms: {game.platforms}
+											Platforms: {game.platform}
 											<br />
 											Game Genre: {game.gamegenre}
 											<br />
@@ -38,7 +56,14 @@ function GameList({ games }) {
 									<Button size="small" sx={{ textAlign: "center" }}>
 										Add to Your Saved
 									</Button>
-									<Button size="small" sx={{ textAlign: "right" }}>
+									<Button
+										size="small"
+										sx={{ textAlign: "right" }}
+										onClick={() => {
+											removeGame({ variables: { id: game._id } });
+											refreshPage();
+										}}
+									>
 										Delete
 									</Button>
 								</CardActions>
