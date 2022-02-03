@@ -25,25 +25,17 @@ export const ADD_USER = gql`
 `;
 
 export const ADD_GAME = gql`
-	mutation addGame(
-		$name: String!
-		$year: String
-		$description: String!
-		$platform: [String!]
-		$gamegenre: String!
-		$moviegenre: String!
-		$mode: String
-	) {
-		addGame(
-			name: $name
-			year: $year
-			description: $description
-			platform: $platform
-			gamegenre: $gamegenre
-			moviegenre: $moviegenre
-			mode: $mode
-		) {
+	mutation addGame($name: String!) {
+		addGame(name: $name) {
 			_id
+			name
+		}
+	}
+`;
+
+export const REMOVE_GAME = gql`
+	mutation removeGame($_id: ID!) {
+		removeGame(_id: $_id) {
 			name
 			year
 			descriptionn
@@ -51,25 +43,6 @@ export const ADD_GAME = gql`
 			gamegenre
 			moviegenre
 			mode
-		}
-	}
-`;
-
-export const REMOVE_GAME = gql`
-	mutation removeGame($_id: ID!) {
-		removGame(_id: $_id) {
-			_id
-			username
-			email
-			savedGames {
-				name
-				year
-				descriptionn
-				platform
-				gamegenre
-				moviegenre
-				mode
-			}
 		}
 	}
 `;

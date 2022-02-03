@@ -66,29 +66,36 @@ const resolvers = {
 			throw new AuthenticationError("You need to be logged in.");
 		},
 
-		removeGame: async (parent, { _id }, context) => {
-			if (context.user) {
-				const updatedUser = await User.findOneAndUpdate(
-					{ _id: context.user._id },
-					{ $pull: { savedGames: _id } },
-					{ new: true }
-				).populate("savedGames");
-				return updatedUser;
+		removeGame: async (parent, args, context, info) => {
+			for (let i in games) {
+				if (games[i].id === args.id) {
+					games.splice(i, 1);
+				}
 			}
-			throw new AuthenticationError("You need to login.");
+			return args.id;
 		},
+		// 	if (context.user) {
+		// 		const updatedUser = await User.findOneAndUpdate(
+		// 			{ _id: context.user._id },
+		// 			{ $pull: { savedGames: _id } },
+		// 			{ new: true }
+		// 		).populate("savedGames");
+		// 		return updatedUser;
+		// 	}
+		// 	throw new AuthenticationError("You need to login.");
+		// },
 	},
-	saveGame: async (parent, { gameData }, context) => {
-		if (context.user) {
-			const updatedUser = await User.findByIdAndUpdate(
-				{ _id: context.user._id },
-				{ $addToSet: { savedGames: gameData } },
-				{ new: true }
-			);
-			return updatedUser;
-		}
-		throw new AuthenticationError("You need to be logged in.");
-	},
+	// saveGame: async (parent, { gameData }, context) => {
+	// 	if (context.user) {
+	// 		const updatedUser = await User.findByIdAndUpdate(
+	// 			{ _id: context.user._id },
+	// 			{ $addToSet: { savedGames: gameData } },
+	// 			{ new: true }
+	// 		);
+	// 		return updatedUser;
+	// 	}
+	// 	throw new AuthenticationError("You need to be logged in.");
+	// },
 };
 
 module.exports = resolvers;

@@ -5,14 +5,9 @@ import CardContent from "@mui/material/CardContent";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import Grid from "@mui/material/Grid";
-
 import "./gamelist.scss";
 
 function GameList({ games }) {
-	// if (!games.legnth) {
-	//   return <h3>You don't have any games saved!</h3>;
-	// }
-
 	return (
 		<div className="game-list">
 			<Grid container spacing={3} sx={{ pl: 1, mb: 3 }}>
