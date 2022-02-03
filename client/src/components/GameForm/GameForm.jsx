@@ -38,8 +38,10 @@ const GameForm = () => {
 		},
 	});
 
-	const handleChange = (event) => {
-		setAddGames(event.target.value);
+	const handleChange = (name, value) => {
+		setAddGames((prevState) => {
+			return { ...prevState, [name]: value };
+		});
 	};
 
 	const handleFormSubmit = async (event) => {
@@ -62,63 +64,58 @@ const GameForm = () => {
 				<input
 					className="form-input"
 					placeholder="Name of Game (Required)"
-					name="game"
+					name="name"
+					id="name"
 					value={addGames.name}
-					onChange={handleChange}
+					onChange={(e) => handleChange("name", e.target.value)}
 				/>
 				<input
 					className="form-input"
 					placeholder="Year of Release"
 					name="year"
-					type="year"
 					id="year"
 					value={addGames.year}
-					onChange={handleChange}
+					onChange={(e) => handleChange("year", e.target.value)}
 				/>
 				<input
 					className="form-input"
 					placeholder="Platform(s) (Required)"
 					name="platform"
-					type="platform"
 					id="platform"
 					value={addGames.platform}
-					onChange={handleChange}
+					onChange={(e) => handleChange("platform", e.target.value)}
 				/>
 				<input
 					className="form-input"
 					placeholder="Game Genre (Required)"
-					name="game-genre"
-					type="game-genre"
-					id="game-genre"
+					name="gamegenre"
+					id="gamegenre"
 					value={addGames.gamegenre}
-					onChange={handleChange}
+					onChange={(e) => handleChange("gamegenre", e.target.value)}
 				/>
 				<input
 					className="form-input"
 					placeholder="Movie Genre (Required)"
-					name="movie-genre"
-					type="movie-genre"
-					id="movie-genre"
+					name="moviegenre"
+					id="moviegenre"
 					value={addGames.moviegenre}
-					onChange={handleChange}
+					onChange={(e) => handleChange("moviegenre", e.target.value)}
 				/>
 				<input
 					className="form-input"
 					placeholder="Mode (Required)"
 					name="mode"
-					type="mode"
 					id="mode"
 					value={addGames.mode}
-					onChange={handleChange}
+					onChange={(e) => handleChange("mode", e.target.value)}
 				/>
 				<input
 					className="form-input"
 					placeholder="Description (Required)"
 					name="description"
-					type="description"
 					id="description"
 					value={addGames.description}
-					onChange={handleChange}
+					onChange={(e) => handleChange("description", e.target.value)}
 				/>
 				<button className="btn" type="submit">
 					ADD GAME

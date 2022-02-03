@@ -14,19 +14,19 @@ export const saveGameIds = (gameIdArr) => {
 	}
 };
 
-export const removeGameId = ({game._id}) => {
-	const savedBookIds = localStorage.getItem("saved_games")
+export const removeGameId = (_id) => {
+	const savedGameIds = localStorage.getItem("saved_games")
 		? JSON.parse(localStorage.getItem("saved_games"))
 		: null;
 
-	if (!savedBookIds) {
+	if (!savedGameIds) {
 		return false;
 	}
 
-	const updatedSavedBookIds = savedBookIds?.filter(
-		(savedBookId) => savedBookId !== bookId
+	const updatedSavedGameIds = savedGameIds?.filter(
+		(savedGameId) => savedGameId !== game._id
 	);
-	localStorage.setItem("saved_games", JSON.stringify(updatedSavedBookIds));
+	localStorage.setItem("saved_games", JSON.stringify(updatedSavedGameIds));
 
 	return true;
 };

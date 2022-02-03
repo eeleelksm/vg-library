@@ -1,12 +1,12 @@
 import { gql } from "@apollo/client";
 
 export const LOGIN_USER = gql`
-	mutation login($email: String!, $password: String!) {
+	mutation Login($email: String!, $password: String!) {
 		login(email: $email, password: $password) {
 			token
 			user {
 				_id
-				_username
+				email
 			}
 		}
 	}
@@ -51,6 +51,25 @@ export const ADD_GAME = gql`
 			gamegenre
 			moviegenre
 			mode
+		}
+	}
+`;
+
+export const REMOVE_GAME = gql`
+	mutation removeGame($_id: ID!) {
+		removGame(_id: $_id) {
+			_id
+			username
+			email
+			savedGames {
+				name
+				year
+				descriptionn
+				platform
+				gamegenre
+				moviegenre
+				mode
+			}
 		}
 	}
 `;

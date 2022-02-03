@@ -5,7 +5,6 @@ import CardContent from "@mui/material/CardContent";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import Grid from "@mui/material/Grid";
-import DeleteIcon from "@mui/icons-material/Delete";
 
 import "./gamelist.scss";
 
@@ -19,7 +18,7 @@ function GameList({ games }) {
 			<Grid container spacing={3} sx={{ pl: 1, mb: 3 }}>
 				{games &&
 					games.map((game) => (
-						<Grid item xs={4} key={game._id}>
+						<Grid item xs={4} key={game.gameId}>
 							<Card sx={{ minWidth: 250, ml: 2 }} className="card">
 								<CardContent>
 									<div>

@@ -34,6 +34,7 @@ const client = new ApolloClient({
 	link: authLink.concat(httpLink),
 	cache: new InMemoryCache(),
 });
+
 function App() {
 	// the navigation bar opening and closing
 	const [navOpen, setNavOpen] = useState(false);

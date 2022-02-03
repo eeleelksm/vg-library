@@ -16,8 +16,8 @@ export const QUERY_GAMES = gql`
 `;
 
 export const QUERY_GAME = gql`
-	query game($id: ID!) {
-		game(_id: $id) {
+	query game($_id: ID!) {
+		game(_id: $_id) {
 			_id
 			name
 			year
@@ -37,7 +37,7 @@ export const QUERY_ME = gql`
 			username
 			email
 			games {
-				_id
+				gameId
 				name
 				year
 				description

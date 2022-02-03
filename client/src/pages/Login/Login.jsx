@@ -4,18 +4,14 @@ import { LOGIN_USER } from "../../utils/mutations";
 import Auth from "../../utils/auth";
 import "./login.scss";
 
-function Login(props) {
-	const [formState, setFormState] = useState({ email: "", password: "" });
+const Login = (props) => {
+	const [userFormData, setUserFormData] = useState({ email: "", password: "" });
 	const [login, { error }] = useMutation(LOGIN_USER);
 
 	// update state based on form input changes
-	const handleChange = (event) => {
+	const handleInputChange = (event) => {
 		const { name, value } = event.target;
-
-		setFormState({
-			...formState,
-			[name]: value,
-		});
+		setUserFormData({ ...userFormData, [name]: value });
 	};
 
 	// submit form
@@ -24,18 +20,16 @@ function Login(props) {
 
 		try {
 			const { data } = await login({
-				variables: { ...formState },
+				variables: { ...userFormData },
 			});
 
 			Auth.login(data.login.token);
 		} catch (e) {
-			console.log(Auth.login());
 			console.error(e);
 		}
 
 		// clear form values
-		setFormState({
-			username: "",
+		setUserFormData({
 			email: "",
 			password: "",
 		});
@@ -52,8 +46,8 @@ function Login(props) {
 						name="email"
 						type="email"
 						id="email"
-						value={formState.email}
-						onChange={handleChange}
+						value={userFormData.email}
+						onChange={handleInputChange}
 					/>
 					<input
 						className="form-input"
@@ -61,8 +55,8 @@ function Login(props) {
 						name="password"
 						type="password"
 						id="password"
-						value={formState.password}
-						onChange={handleChange}
+						value={userFormData.password}
+						onChange={handleInputChange}
 					/>
 					<button className="btn" type="submit">
 						LOG IN
@@ -75,6 +69,6 @@ function Login(props) {
 			</div>
 		</div>
 	);
-}
+};
 
 export default Login;

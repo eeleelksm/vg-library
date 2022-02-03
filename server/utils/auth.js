@@ -5,7 +5,7 @@ const expiration = "4h";
 
 module.exports = {
 	authMiddleware: function ({ req }) {
-		let token = req.body.token || req.query.token || req.headers.authorization;
+		let token = req.body.token || req.query.tokens || req.headers.authorization;
 
 		if (req.headers.authorization) {
 			token = token.split(" ").pop().trim();
@@ -20,6 +20,7 @@ module.exports = {
 			req.user = data;
 		} catch {
 			console.log("Invalid token");
+			console.log(req.user);
 		}
 
 		return req;

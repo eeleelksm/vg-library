@@ -2,7 +2,7 @@ const { gql } = require("apollo-server-express");
 
 const typeDefs = gql`
 	type User {
-		_id: ID
+		_id: ID!
 		username: String
 		email: String
 		savedGames: [Game]
@@ -44,12 +44,13 @@ const typeDefs = gql`
 		addGame(
 			name: String!
 			year: String!
-			description: String!
+			description: String
 			platform: [String!]
 			gamegenre: String!
 			moviegenre: String!
 			mode: String!
-		): User
+		): Game
+    removeGame(_id: ID!): User
 	}
 
 	type Auth {
