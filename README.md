@@ -1,6 +1,6 @@
 # Playbox
 
-<b>Playbox</b> is an interactive library where you can view and add video games you'd like to enjoy for laater or would like to recommend to others.
+<b>Playbox</b> is an interactive library where you can view and add video games you'd like to enjoy for later or would like to recommend to others.
 
 Looking for a video game recommendation based on the movie genres you love?
 
